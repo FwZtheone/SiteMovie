@@ -5,10 +5,15 @@ class SearchBar extends Component{
         super(props);
         this.state = {searchText : ' ',placeHolder : "Tapez votre film"}
     }
-     handleChange = () => this.setState({searchText: event.target.value});
+     handleChange = (event) => this.setState({searchText: event.target.value});
     render()
     {
-        return <input onChange={this.handleChange} placeholder={this.state.placeHolder}/>
+        return <div>
+            <input onChange={this.handleChange} placeholder={this.state.placeHolder}/>
+
+        
+        </div>
+
 
     }
 
